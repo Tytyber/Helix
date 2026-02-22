@@ -2,67 +2,94 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Nuro — Новый уровень общения</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="static/css/main.css">
+    <title>Helix by Atgex | Сообщества и Чаты нового уровня</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="bg-glow"></div>
 
-<div class="background">
-    <div class="glow glow1"></div>
-    <div class="glow glow2"></div>
-</div>
+    <nav class="nav">
+        <div class="logo">HELIX <span>by Atgex</span></div>
 
-<header class="navbar fade-in">
-    <div class="logo">Nuro</div>
-    <nav>
-        <a href="#features">Возможности</a>
-        <a href="#about">О проекте</a>
-        <a href="#download" class="btn-outline">Открыть</a>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#features">Фичи</a></li>
+            <li><a href="#security">Безопасность</a></li>
+            <li><a href="#hubs">Хабы</a></li>
+        </ul>
+
+        <div class="nav-buttons">
+            <button class="btn-outline">Скачать</button>
+            <button class="btn-web">Веб-версия</button>
+        </div>
     </nav>
-</header>
 
-<section class="hero fade-in">
-    <h1>Nuro</h1>
-    <p class="subtitle">
-        Современный мессенджер для хабов, сообществ и умных связей.
-    </p>
-    <div class="hero-buttons">
-        <button class="btn-primary">Начать</button>
-        <button class="btn-secondary">Подробнее</button>
-    </div>
-</section>
 
-<section id="features" class="features fade-in">
-    <h2>Возможности</h2>
-    <div class="features-grid">
-        <div class="feature-card fade-in">
-            <h3>Хабы</h3>
-            <p>Создавай сообщества с десятками тематических чатов.</p>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Входи в <span class="gradient-text">мир Helix</span></h1>
+            <p>Объединяйся с сообществами, чатай с друзьями и открывай для себя контент нового поколения. Репутация пользователей, продвинутые хабы и приватные крипто-чаты — всё в одном приложении.</p>
+            <div class="hero-btns">
+                <button class="btn-primary">Создать аккаунт</button>
+                <button class="btn-secondary">Узнать больше</button>
+                <button class="btn-web">Открыть Web</button>
+            </div>
+            <div class="stats">
+            </div>
         </div>
-        <div class="feature-card fade-in">
-            <h3>Лента</h3>
-            <p>Следи за топ-хабами и популярными постами.</p>
+    </header>
+
+    <section id="features" class="features">
+        <h2>Что внутри Helix</h2>
+        <div class="grid">
+            <div class="glass-card active">
+                <div class="card-img small"></div>
+                <h3>Helix AI</h3>
+                <p>Умный ассистент, который помогает находить топ-хабы и управлять контентом.</p>
+            </div>
+            <div class="glass-card">
+                <div class="card-img small"></div>
+                <h3>Хабы и Ленты</h3>
+                <p>Следи за топовыми сообществами и персональными подборками контента.</p>
+            </div>
+            <div class="glass-card">
+                <div class="card-img small"></div>
+                <h3>Репутация пользователей</h3>
+                <p>Доверяй активным и честным участникам, оценивай контент и общение.</p>
+            </div>
         </div>
-        <div class="feature-card fade-in">
-            <h3>Репутация</h3>
-            <p>Каждый пользователь влияет на доверие и вес контента.</p>
+    </section>
+
+    <section id="security" class="features">
+        <h2>Безопасность на первом месте</h2>
+        <div class="grid">
+            <div class="glass-card">
+                <h3>End-to-End Шифрование</h3>
+                <p>Ваши сообщения защищены от посторонних — полностью приватные чаты.</p>
+            </div>
+            <div class="glass-card">
+                <h3>Децентрализованные ключи</h3>
+                <p>Часть ключей хранится у пользователей, часть — в защищённой БД Helix.</p>
+            </div>
+            <div class="glass-card">
+                <h3>Антиспам и модерация</h3>
+                <p>Система репутации помогает фильтровать спам и токсичный контент.</p>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="about" class="about fade-in">
-    <h2>О проекте</h2>
-    <p>
-        Nuro — продукт компании <strong>Atgex</strong>.  
-        Мы создаём цифровые пространства нового поколения.
-    </p>
-</section>
+    <section id="hubs" class="features">
+        <h2>Хабы Helix</h2>
+        <p>Объединяйся с сообществами по интересам: технологии, игры, музыка, крипто и многое другое. Хабы с подборкой топ-контента и возможностью создать свои уникальные чаты.</p>
+    </section>
 
-<footer class="fade-in">
-    <p>© 2026 Atgex. Все права защищены.</p>
-</footer>
-
-<script src="static/js/index.js"></script>
+    <script src="static/js/main.js"></script>
 </body>
 </html>
