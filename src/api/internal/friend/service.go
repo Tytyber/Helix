@@ -11,6 +11,21 @@ type Service struct {
 	DB *pgxpool.Pool
 }
 
+type FriendRequest struct {
+	ID        int       `json:"id"`
+	FromID    string    `json:"from_id"`
+	Username  string    `json:"username"`
+	Email     string    `json:"email"`
+	CreatedAt time.Time `json:"created_at"`
+}
+
+// Список друзей
+type Friend struct {
+	ID       string `json:"id"`
+	Username string `json:"username"`
+	Email    string `json:"email"`
+}
+
 func NewService(db *pgxpool.Pool) *Service {
 	return &Service{DB: db}
 }
@@ -42,13 +57,6 @@ func (s *Service) AcceptRequest(ctx context.Context, fromID, toID string) error 
 	return err
 }
 
-// Список друзей
-type Friend struct {
-	ID       string `json:"id"`
-	Username string `json:"username"`
-	Email    string `json:"email"`
-}
-
 func (s *Service) ListFriends(ctx context.Context, userID string) ([]Friend, error) {
 	rows, err := s.DB.Query(ctx, `
 		SELECT u.id, u.username, u.email
@@ -70,4 +78,48 @@ func (s *Service) ListFriends(ctx context.Context, userID string) ([]Friend, err
 		friends = append(friends, f)
 	}
 	return friends, nil
+}
+
+func (s *Service) DeclineRequest(ctx context.Context, fromID, toID string) error {
+	_, err := s.DB.Exec(ctx, `
+		DELETE FROM friends_requests
+		WHERE from_user_id=$1 AND to_user_id=$2
+	`, fromID, toID)
+	return err
+}
+
+func (s *Service) IncomingRequests(ctx context.Context, userID string) ([]FriendRequest, error) {
+	rows, err := s.DB.Query(ctx, `
+		SELECT fr.id, u.id, u.username, u.email, fr.created_at
+		FROM friends_requests fr
+		JOIN users u ON u.id = fr.from_user_id
+		WHERE fr.to_user_id = $1
+		ORDER BY fr.created_at DESC
+	`, userID)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+
+	var requests []FriendRequest
+
+	for rows.Next() {
+		var r FriendRequest
+		if err := rows.Scan(
+			&r.ID,
+			&r.FromID,
+			&r.Username,
+			&r.Email,
+			&r.CreatedAt,
+		); err != nil {
+			return nil, err
+		}
+		requests = append(requests, r)
+	}
+
+	if err := rows.Err(); err != nil {
+		return nil, err
+	}
+
+	return requests, nil
 }
