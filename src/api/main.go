@@ -86,6 +86,8 @@ func main() {
 		protected.POST("/friends/request", friendsHandler.SendRequest)
 		protected.POST("/friends/accept", friendsHandler.AcceptRequest)
 		protected.GET("/friends", friendsHandler.ListFriends)
+		protected.GET("/friends/requests", friendsHandler.IncomingRequests)
+		protected.POST("/friends/decline", friendsHandler.DeclineRequest)
 
 		//звонки
 		protected.POST("/calls", callsHandler.CreateCall)
