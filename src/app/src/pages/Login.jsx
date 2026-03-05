@@ -18,13 +18,13 @@ export default function Login() {
   }
 
   return (
-    <div>
-      <h2>Login</h2>
-      <input placeholder="Email" onChange={e => setEmail(e.target.value)} />
+    <div class = "loginPage">
+      <h2 class = "loginTextLogin">Login in account</h2>
+      <input class="emailRegisterLogin" placeholder="  Email" onChange={e => setEmail(e.target.value)} />
       <br />
-      <input type="password" placeholder="Password" onChange={e => setPassword(e.target.value)} />
+      <input class="passwordRegisterLogin" type="password" placeholder="  Password" onChange={e => setPassword(e.target.value)} />
       <br />
-      <button onClick={handleLogin}>Login</button>
+      <button class="loginButton" onClick={handleLogin}>Login now</button>
     </div>
   )
 }
