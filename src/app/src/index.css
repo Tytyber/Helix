@@ -5,3 +5,59 @@
 body {
   @apply bg-gradient-to-br from-[#0f061d] via-[#140a28] to-[#090014] text-white;
 }
+
+body {
+@apply bg-gradient-to-br from-[#0f061d] via-[#140a28] to-[#090014] text-white;
+background: linear-gradient(to right, #0f061d, #140a28, #090014);
+h1, h2, h3, p {color: #FFFFFF;}
+}
+
+.loginTextLogin{
+    margin-top: 5%;
+    margin-bottom: 8
+    
+}
+
+.emailRegisterLogin{
+    margin-bottom: 8%;
+    width: 50%;
+    border: #FFFFFF;
+    border-radius: 50px;
+    
+}
+
+.passwordRegisterLogin{
+    width: 50%;
+    border: #FFFFFF;
+    border-radius: 50px;
+    
+}
+
+.loginPage{
+    background: linear-gradient(to right, #0f061d, #140a28, #090014);
+    text-align: center;
+}
+
+
+
+.loginButton{
+    background: linear-gradient(90deg, var(--accent-purple), var(--accent-cyan));
+    border: none;
+    color: #fff;
+    padding: 15px 35px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(112, 0, 255, 0.4);
+    margin-top: 10%;
+}
+
+.loginButton:hover{
+    background: #361c69;
+    color: #FFFFFF;
+}
+.loginButton:active{
+    background: #361c69;
+    color: #FFFFFF;
+}
+
