@@ -1,63 +1,41 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-body {
-  @apply bg-gradient-to-br from-[#0f061d] via-[#140a28] to-[#090014] text-white;
-}
-
-body {
-@apply bg-gradient-to-br from-[#0f061d] via-[#140a28] to-[#090014] text-white;
-background: linear-gradient(to right, #0f061d, #140a28, #090014);
-h1, h2, h3, p {color: #FFFFFF;}
-}
-
-.loginTextLogin{
-    margin-top: 5%;
-    margin-bottom: 8
-    
-}
-
-.emailRegisterLogin{
-    margin-bottom: 8%;
-    width: 50%;
-    border: #FFFFFF;
-    border-radius: 50px;
-    
-}
-
-.passwordRegisterLogin{
-    width: 50%;
-    border: #FFFFFF;
-    border-radius: 50px;
-    
-}
-
-.loginPage{
+body{
     background: linear-gradient(to right, #0f061d, #140a28, #090014);
-    text-align: center;
+}
+.loginTextLogin {
+    margin-top: 5%;
+    margin-bottom: 8%; 
+    color: white;
 }
 
+.emailRegisterLogin, .passwordRegisterLogin {
+    margin-bottom: 20px;
+    width: 80%; 
+    border: 1px solid #FFFFFF; 
+    border-radius: 50px;
+    padding: 10px 20px;
+    background: transparent;
+    color: white;
+}
 
+.loginPage {
+    text-align: center;
+    min-height: 100 vh;
+}
 
-.loginButton{
-    background: linear-gradient(90deg, var(--accent-purple), var(--accent-cyan));
+.loginButton {
+    background: linear-gradient(90deg, #7000ff, #00d4ff); 
     border: none;
     color: #fff;
-    padding: 15px 35px;
-    border-radius: 8px;
+    padding: 12px 30px;
+    border-radius: 50px; 
     font-weight: 600;
     transition: all 0.3s ease;
     box-shadow: 0 5px 15px rgba(112, 0, 255, 0.4);
-    margin-top: 10%;
 }
 
-.loginButton:hover{
+.loginButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 20px rgba(112, 0, 255, 0.6);
     background: #361c69;
     color: #FFFFFF;
 }
-.loginButton:active{
-    background: #361c69;
-    color: #FFFFFF;
-}
-
