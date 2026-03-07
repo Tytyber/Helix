@@ -6,19 +6,19 @@ body{
 
 /*Register Page*/
 
-body{
-    background: linear-gradient(to right, #0f061d, #140a28, #090014);
+.registerPage{
+    text-align: center;
 }
 .registerTextRegister {
     margin-top: 5%;
-    margin-bottom: 8%; /* Добавлена точка с запятой */
+    margin-bottom: 8%; 
     color: white;
 }
 
 .userRegisterPage, .emailRegisterPage, .passwordRegisterPage {
     margin-bottom: 20px;
-    width: 80%; /* Увеличил для мобильности */
-    border: 1px solid #FFFFFF; /* Добавил тип границы */
+    width: 80%; 
+    border: 1px solid #FFFFFF; 
     border-radius: 50px;
     padding: 10px 20px;
     background: transparent;
@@ -30,22 +30,38 @@ body{
     min-height: 100 vh;
 }
 
-.loginButton {
-    /* Переменные --accent лучше объявить или заменить на цвета */
+.registerButton {
     background: linear-gradient(90deg, #7000ff, #00d4ff); 
     border: none;
     color: #fff;
     padding: 12px 30px;
-    border-radius: 50px; /* Сделал закругленным под стиль инпутов */
+    border-radius: 50px; 
     font-weight: 600;
     transition: all 0.3s ease;
     box-shadow: 0 5px 15px rgba(112, 0, 255, 0.4);
 }
 
-.loginButton:hover {
+.registerButton:hover, .registerButton:active {
     transform: translateY(-2px);
     box-shadow: 0 7px 20px rgba(112, 0, 255, 0.6);
     background: #361c69;
+    color: #FFFFFF;
+}
+.fromRegisterToLoginButton{
+    background: linear-gradient(90deg, #7000ff, #00d4ff);
+    border: none;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 50px; 
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(112, 0, 255, 0.4);
+    margin-right: 5%;
+}
+.fromRegisterToLoginButton:hover, .fromRegisterToLoginButton:active{
+    transform: translateY(-2px);
+    box-shadow: 0 7px 20px rgba(112, 0, 255, 0.6);
+    background: #361c69; 
     color: #FFFFFF;
 }
 
@@ -85,6 +101,23 @@ body{
 }
 
 .loginButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 20px rgba(112, 0, 255, 0.6);
+    background: #361c69;
+    color: #FFFFFF;
+}
+.fromLoginToRegisterButton{
+    background: linear-gradient(90deg, #7000ff, #00d4ff); 
+    border: none;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 50px; 
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(112, 0, 255, 0.4);
+    margin-right: 5%;
+}
+.fromLoginToRegisterButton:hover, .fromLoginToRegisterButton:active{
     transform: translateY(-2px);
     box-shadow: 0 7px 20px rgba(112, 0, 255, 0.6);
     background: #361c69;

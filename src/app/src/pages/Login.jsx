@@ -20,10 +20,11 @@ export default function Login() {
   return (
     <div class = "loginPage">
       <h2 class = "loginTextLogin">Login in account</h2>
-      <input class="emailRegisterLogin" placeholder="  Email" onChange={e => setEmail(e.target.value)} />
+      <input class="emailRegisterLogin" placeholder="Email" onChange={e => setEmail(e.target.value)} />
       <br />
-      <input class="passwordRegisterLogin" type="password" placeholder="  Password" onChange={e => setPassword(e.target.value)} />
+      <input class="passwordRegisterLogin" type="password" placeholder="Password" onChange={e => setPassword(e.target.value)} />
       <br />
+      <button href="Register.jsx" class="fromLoginToRegisterButton">Don't have an account?</button>
       <button class="loginButton" onClick={handleLogin}>Login now</button>
     </div>
   )

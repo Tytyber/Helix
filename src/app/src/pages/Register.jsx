@@ -17,12 +17,13 @@ export default function Register() {
   };
 
   return (
-    <div style={{ padding: "2rem" }}>
-      <h1 class="registerTextRegister">Register</h1>
+    <div class="registerPage" style={{ padding: "2rem" }}>
+      <h1 class="registerTextRegister">Register now!</h1>
       <input class="userRegisterPage" placeholder="Username" value={username} onChange={e => setUsername(e.target.value)} /><br/>
       <input class="emailRegisterPage" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} /><br/>
       <input class="passwordRegisterPage" placeholder="Password" type="password" value={password} onChange={e => setPassword(e.target.value)} /><br/>
-      <button onClick={handleRegister}>Register</button>
+      <button href="Login.jsx" class="fromRegisterToLoginButton">Have an account</button>
+      <button class="registerButton" onClick={handleRegister}>Register</button>
     </div>
-  );
+  )
 }
